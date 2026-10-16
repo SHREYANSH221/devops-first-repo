@@ -1,0 +1,19 @@
+
+name: My First Workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  PROJECT_NAME: devops-first-repo
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display project name
+        run: echo "Hello from $PROJECT_NAME"
+
+      - name: Confirm success
+        run: echo "My first GitHub Actions workflow works!"
